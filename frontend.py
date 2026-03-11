@@ -220,12 +220,12 @@ def add():
                 detail = backend.get_detail(acc_no)
 
                 label = Label(
-                    add_frame, text="Account holder name:   {}".format(detail[0][0])
+                    add_frame, text="Account holder name:   {}".format(detail[0])
                 )
                 label.grid(row=0, pady=3)
 
                 label = Label(
-                    add_frame, text="Current amount:   {}".format(detail[0][1])
+                    add_frame, text="Current amount:   {}".format(detail[1])
                 )
                 label.grid(row=1, pady=3)
 
@@ -311,12 +311,12 @@ def withdraw():
                 detail = backend.get_detail(acc_no)
 
                 label = Label(
-                    add_frame, text="Account holder name:   {}".format(detail[0][0])
+                    add_frame, text="Account holder name:   {}".format(detail[0])
                 )
                 label.grid(row=0, pady=3)
 
                 label = Label(
-                    add_frame, text="Current amount:   {}".format(detail[0][1])
+                    add_frame, text="Current amount:   {}".format(detail[1])
                 )
                 label.grid(row=1, pady=3)
 
@@ -1024,7 +1024,7 @@ def show_employee():
 
     label = Label(
         show_employee_frame,
-        text="Name\t\t\tSalary\t\t\tPosition\t\t\tpassword",
+        text="Name\t\t\tSalary\t\t\tPosition",
         font="bold",
     )
     label.grid(row=0)
@@ -1034,7 +1034,7 @@ def show_employee():
     for i in details:
         label = Label(
             show_employee_frame,
-            text="{}\t\t\t{}\t\t\t{}\t\t\t{}".format(i[0], i[1], i[2], i[3]),
+            text="{}\t\t\t{}\t\t\t{}".format(i[0], i[1], i[2]),
         )
         label.grid(pady=4)
 
